@@ -14,7 +14,7 @@ if [[ ! -f "$CACHE_FILE" ]]; then
         default_dir="${HOME}/Wallpapers"
         pick="$(find "${default_dir}" -maxdepth 1 -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) 2>/dev/null | head -n1)"
         if [[ -n "${pick:-}" ]]; then
-            swww img "${pick}" --transition-type none >/dev/null 2>&1 || true
+            swww img "${pick}" --transition-type random --transition-duration 1.0 >/dev/null 2>&1 || true
         fi
     fi
     exit 0
@@ -35,5 +35,6 @@ sleep 1
 # Restore wallpaper
 
 swww img "$WALLPAPER" \
-    --transition-type none \
+    --transition-type random \
+    --transition-duration 1.0 \
     >/dev/null 2>&1 || true

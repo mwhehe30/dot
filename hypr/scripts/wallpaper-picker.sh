@@ -27,7 +27,7 @@ if [[ -z "$SELECTED" ]]; then
     exit 0
 fi
 
-swww img "$SELECTED" --transition-type wipe --transition-duration 0.8
+swww img "$SELECTED" --transition-type random --transition-duration 1.0
 
 mkdir -p "$(dirname "$CACHE_FILE")"
 printf '%s\n' "$SELECTED" > "$CACHE_FILE"
