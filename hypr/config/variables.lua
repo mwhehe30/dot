@@ -12,15 +12,15 @@ M.altMod = "ALT"
 
 M.terminal = "kitty"
 
-M.browser = "helium"
+M.browser = "helium-browser"
 
 M.fileManager = "thunar"
 
 M.editor = "nvim"
 
-M.guieditor = "code"
+M.guieditor = "kitty -e nvim"
 
-M.note = "code"
+M.note = "kitty -e nvim"
 
 -- Rofi Launcher
 

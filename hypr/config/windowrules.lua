@@ -333,7 +333,7 @@ hl.window_rule({
 	name = "helium-browser",
 
 	match = {
-		class = "^helium$",
+		class = "^helium-browser$",
 	},
 
 	opacity = "0.92 override 0.92 override 0.92 override",
@@ -347,7 +347,7 @@ hl.window_rule({
 	name = "helium-google-auth",
 
 	match = {
-		class = "^helium$",
+		class = "^helium-browser$",
 		title = "Google Accounts",
 	},
 
@@ -369,7 +369,7 @@ hl.window_rule({
 	name = "helium-picture-in-picture",
 
 	match = {
-		class = "^helium$",
+		class = "^helium-browser$",
 		title = "Picture-in-Picture",
 	},
 

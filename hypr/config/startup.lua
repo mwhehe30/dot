@@ -2,8 +2,6 @@
 -- Standalone CachyOS Hyprland
 
 hl.on("hyprland.start", function()
-	local home = os.getenv("HOME")
-
 	-- Session Environment (best effort; UWSM may handle this already)
 
 	hl.exec_cmd(
@@ -12,27 +10,26 @@ hl.on("hyprland.start", function()
 			.. "XDG_CURRENT_DESKTOP "
 			.. "XDG_SESSION_TYPE "
 			.. "XDG_SESSION_DESKTOP "
-			.. "HYPRLAND_INSTANCE_SIGNATURE "
-			.. "&"
+			.. "HYPRLAND_INSTANCE_SIGNATURE"
 	)
 
 	-- Notifications daemon
 
-	hl.exec_cmd("mako &")
+	hl.exec_cmd("mako")
 
 	-- Wallpaper daemon (swww)
 
-	hl.exec_cmd("swww-daemon &")
+	hl.exec_cmd("swww-daemon")
 
 	-- NetworkManager applet
 
-	hl.exec_cmd("nm-applet --indicator &")
+	hl.exec_cmd("nm-applet --indicator")
 
 	-- Bluetooth applet
 
-	hl.exec_cmd("blueman-applet &")
+	hl.exec_cmd("blueman-applet")
 
 	-- Set a default wallpaper
 
-	hl.exec_cmd("sleep 1 && ~/.config/hypr/scripts/restore-wallpaper.sh &")
+	hl.exec_cmd("sleep 1 && ~/.config/hypr/scripts/restore-wallpaper.sh")
 end)

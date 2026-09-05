@@ -84,7 +84,6 @@ REPO_PKGS=(
     brightnessctl
     playerctl
     mako
-    waybar
     network-manager-applet
     blueman
     polkit-gnome
@@ -96,10 +95,10 @@ REPO_PKGS=(
     nwg-look
     papirus-icon-theme
     ttf-jetbrains-mono-nerd
-    otf-jetbrains-mono-nerd
     lxappearance
     hyprlock
     hypridle
+    neovim
 )
 
 # Apps from the NixOS config (install via official repos where available)
@@ -147,7 +146,7 @@ install_packages() {
         else
             ok "All repo packages already installed."
         fi
-        warn "AUR apps (obsidian, zed) not installed - no AUR helper detected."
+        warn "helium-browser-bin not installed - no AUR helper detected (install paru first)."
     fi
 }
 
