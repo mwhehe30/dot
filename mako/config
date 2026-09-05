@@ -1,0 +1,26 @@
+# Mako notification daemon
+# Standalone CachyOS Hyprland - Everforest (Calm green earthy dark theme)
+
+anchor=top-right
+margin=12
+padding=14
+border-size=2
+border-radius=12
+default-timeout=5000
+ignore-timeout=false
+max-visible=5
+
+font=JetBrainsMono Nerd Font 11
+
+# Everforest colors
+background-color=#2D353B
+text-color=#D3C6AA
+border-color=#7FBBB3
+
+progress-color=over #A7C080
+
+# Action buttons
+button-border-radius=8
+
+# Layer
+layer=overlay
