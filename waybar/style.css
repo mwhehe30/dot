@@ -1,0 +1,79 @@
+/* Waybar style - Everforest */
+/* Standalone CachyOS Hyprland */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(45, 53, 59, 0.85);
+    color: #D3C6AA;
+    border-radius: 10px;
+    border: 1px solid rgba(74, 87, 93, 0.5);
+}
+
+/* Left modules */
+#workspaces button {
+    padding: 0 8px;
+    color: #9DA9A0;
+    background: transparent;
+    border-radius: 6px;
+    margin: 4px 2px;
+}
+
+#workspaces button.active {
+    background: rgba(167, 192, 128, 0.25);
+    color: #A7C080;
+}
+
+#workspaces button:hover {
+    background: rgba(167, 192, 128, 0.15);
+    color: #D3C6AA;
+}
+
+/* Center modules */
+#clock {
+    padding: 0 12px;
+    color: #D3C6AA;
+    font-weight: bold;
+}
+
+/* Right modules */
+#pulseaudio, #network, #bluetooth, #battery, #power-profiles-daemon, #tray {
+    padding: 0 10px;
+    color: #D3C6AA;
+}
+
+#pulseaudio {
+    color: #7FBBB3;
+}
+
+#network {
+    color: #DBBC7F;
+}
+
+#bluetooth {
+    color: #D699B6;
+}
+
+#battery {
+    color: #A7C080;
+}
+
+#battery.warning {
+    color: #DBBC7F;
+}
+
+#battery.critical {
+    color: #E67E80;
+}
+
+#power-profiles-daemon {
+    color: #83C092;
+}
+
+#tray {
+    color: #9DA9A0;
+}

@@ -17,6 +17,10 @@ hl.on("hyprland.start", function()
 
 	hl.exec_cmd("mako")
 
+	-- Status bar
+
+	hl.exec_cmd("waybar")
+
 	-- Wallpaper daemon (swww)
 
 	hl.exec_cmd("swww-daemon")

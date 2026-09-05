@@ -84,6 +84,7 @@ REPO_PKGS=(
     brightnessctl
     playerctl
     mako
+    waybar
     network-manager-applet
     blueman
     polkit-gnome
@@ -178,7 +179,7 @@ backup_existing() {
     mkdir -p "$backup_dir"
     info "Backing up existing configs to: $backup_dir"
 
-    for d in hypr kitty rofi mako; do
+    for d in hypr kitty rofi mako waybar; do
         if [[ -e "$HOME/.config/$d" ]]; then
             cp -r "$HOME/.config/$d" "$backup_dir/" 2>/dev/null || true
         fi
@@ -222,6 +223,12 @@ deploy_configs() {
     info "Deploying mako config..."
     mkdir -p "$HOME/.config/mako"
     cp -r "$SCRIPT_DIR/mako/config"        "$HOME/.config/mako/config"
+
+    # waybar
+    info "Deploying waybar config..."
+    mkdir -p "$HOME/.config/waybar"
+    cp -r "$SCRIPT_DIR/waybar/config.jsonc" "$HOME/.config/waybar/config.jsonc"
+    cp -r "$SCRIPT_DIR/waybar/style.css"    "$HOME/.config/waybar/style.css"
 
     # Mark scripts executable
     chmod +x "$HOME/.config/hypr/scripts/"*.sh
